@@ -114,6 +114,7 @@ audio {
   width: 50%;
   /* Ancho deseado */
   -webkit-text-stroke: 1.5px #ff0000;
+  overflow: hidden;
 
 }
 
