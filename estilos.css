@@ -1,0 +1,84 @@
+/* estilos.css */
+
+body {
+    background-color: black;
+    color: white; /* Cambia el color del texto para que sea legible en fondo negro */
+    font-family: 'Roboto', sans-serif; /* Cambia a la fuente deseada */
+  }
+  
+#contenedor-listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 5px; /* Espacio entre las imágenes */
+}
+
+#titulo {
+
+    text-align: center;
+    color: #ff0000;
+    margin-top: 70px; /* Ajusta la distancia hacia abajo según tus necesidades */
+    margin-bottom: -45px; /* Ajusta la distancia hacia abajo según tus necesidades */
+    animation: bailarin 0.1s infinite; /* Aplica la animación infinitamente */
+    box-shadow: 50px 7px 3px rgba(255, 255, 255, 0.1); /* Agrega una sombra suave */
+  }
+
+  
+#titulo2 {
+    text-align: center;
+    margin-top: 30px; /* Ajusta la distancia hacia abajo según tus necesidades */
+    margin-bottom: 0px; /* Ajusta la distancia hacia abajo según tus necesidades */
+    animation: bailarin 0s infinite; /* Aplica la animación infinitamente */
+    box-shadow: 0px 7px 30px rgba(255, 255, 255, 0.1); /* Agrega una sombra suave */
+  }
+
+  @keyframes bailarin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    0% { transform: rotate(0); }
+}
+
+.genero {
+    text-align: center;
+    font-size: 12px; /* Ajusta el tamaño de fuente según tus preferencias */
+}
+
+.genero a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #ffffff; /* Cambia el color del texto (puedes ajustarlo según tus preferencias) */
+}
+
+.genero img {
+    margin-top: 30px; /* Ajusta la distancia hacia abajo según tus necesidades */
+    max-width: 130px;
+    border-radius: 50%;
+    box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.1); /* Agrega una sombra suave */
+    animation: bailarin 20s infinite; /* Aplica la animación infinitamente */
+
+    /* Otros estilos de imagen */
+}
+
+footer {
+    text-align: center;
+    background-color: #0a0a0a;
+    padding: 10px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+
+
+/* Estilos para dispositivos móviles (hasta 600px de ancho) */
+@media (max-width: 600px) {
+    #contenedor-listas {
+        grid-template-columns: 2, 1fr; /* Dos columna para dispositivos móviles */
+    } 
+}
+
+/* Estilos para tabletas (de 601px a 1024px de ancho) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #contenedor-listas {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para tabletas */
+    }
+}

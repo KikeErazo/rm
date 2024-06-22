@@ -1,0 +1,13 @@
+p�gina web completa con sus codigos completos en html, javascript y css3, que tenga estas caracteristicas:
+
+1. Un reproductor de musica con sus botones de play, stop, adelantar la siguiente canci�n, atrasar a la anterior canci�n, pausar canci�n, subir volumen, bajar volumen, reproduccion continua, reproducion aleatoria, repetir cancion, repetir todas las canciones.
+
+2. Que permita ver las canciones en una lista, canciones que van a estar en una carpeta de la p�gina web.
+
+3. que tenga un ecualizador, minimo de 10 bandas.
+
+4. que tenga un buscador de canciones.
+
+5. que permita ver las caratulas de las canciones, el nombre de la cancion que se reproduce, el tiempo de la canci�n, y a medida que se reproduce el tiempo que queda para terminar la cancion.
+
+6. que sea adaptativa y se pueda ver correctamente en celulares y tabletas.

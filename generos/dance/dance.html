@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♪ENRAZ♪Reproductor de Música</title>
+  <link rel="stylesheet" href="/generos/dance/estilos.css">
+  <link rel="shortcut icon" href="imagenes/musica.png"/>
+</head>
+
+<body>
+
+  <nav class="menu-navegacion">
+    <div class="menu-icono">
+      <div class="barra"></div>
+      <div class="barra"></div>
+      <div class="barra"></div>
+    </div>
+       <ul class="menu-enlaces">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/generos/rock/rock.html">Rock</a></li>
+          <li><a href="/generos/rockesp/rockesp.html">Rock en Español</a></li>
+          <li><a href="/generos/salsa/salsa.html">Salsa</a></li>
+          <li><a href="/generos/80s90s/8090.html">80s y 90s</a></li>
+          <li><a href="/generos/dance/dance.html">Dance</a></li>
+          <li><a href="/generos/pop/pop.html">Pop</a></li>
+          <li><a href="/generos/baladas/baladas.html">Baladas</a></li>
+          <li><a href="/generos/instrumental/instrumental.html">Instrumental</a></li>
+          <!-- Agrega más elementos de menú aquí -->
+      </ul>
+  </nav>
+  
+  
+  <div class="genero">
+    <div style="display: flex; align-items: center;">
+      <img src="/imagenes/dance.jpg" alt="Rock" style="width: 130px; margin-right: 10px;">
+      <h2>Dance</h2>
+    </a>
+    </div>
+  </div>
+
+
+  <div id="reproductor-musica">
+    <audio id="audio-player" controls preload="none">
+      <source src="canciones/001. Led Zeppelin - Stairway to Heaven.mp3" type="audio/mpeg"/>
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div id="nombre-cancion-actual"> ♪ ♫ Más Música...
+    </div>
+
+    <div id="controles-adicionales">
+      <button id="boton-anterior">♪◀</button> <!-- Ícono de flecha hacia la izquierda -->
+      <button id="boton-siguiente">▶♪</button> <!-- Ícono de flecha hacia la derecha -->
+      <button id="boton-aleatorio">▲▼</button>
+
+    </div>
+
+
+
+    <div id="contenedor-lista" style="height: 300px; overflow-y: scroll;">
+      <ul id="lista-canciones">
+
+
+        <!-- Array javascrip Tus elementos de lista aquí -->
+      </ul>
+    </div>
+
+    <footer>
+      <p>By ENRAZ - 2024</p>
+    </footer>
+
+
+    <script src="/generos/dance/scripts.js"></script>
+</body>
+
+</html>

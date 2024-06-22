@@ -1,0 +1,275 @@
+/* estilos.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  /* Fondo negro para todo el cuerpo de la página */
+  color: white;
+  /* Texto blanco para todo el cuerpo de la página */
+}
+
+
+/* Estilos para el menú de navegación */
+.menu-navegacion {
+  position: relative;
+  top: 1%;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el menú */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #333;
+  padding: 0px;
+}
+
+.menu-icono {
+  display: none; /* Oculta el icono en pantallas grandes */
+  cursor: pointer;
+}
+
+.barra {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.menu-enlaces {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-enlaces li {
+  padding: 14px 20px;
+}
+
+.menu-enlaces a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+/* #titulo {
+  text-align: center;
+  margin-top: 70px;  Ajusta la distancia hacia abajo según tus necesidades 
+  margin-bottom: 20px; /* Ajusta la distancia hacia abajo según tus necesidades 
+}
+*/
+
+.genero img {
+  margin-top: 90px; /* Ajusta la distancia hacia abajo según tus necesidades */
+  max-width: 130px;
+  border-radius: 50%;
+  box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.1); /* Agrega una sombra suave */
+  animation: bailarin 5s infinite alternate; /* Aplica la animación */
+  padding: 10%;
+
+  /* Otros estilos de imagen */
+}
+
+@keyframes bailarin {
+
+            100% {
+                transform: rotate(0) translateY(100px);
+            }
+            50% {
+                transform: rotate(180deg) translateY(20px);
+            }
+            100% {
+                transform: rotate(3600deg) translateY(0);
+            }
+        }
+
+
+
+#reproductor-musica {
+  text-align: center;
+  max-width: 600px;
+  margin:  auto;
+  background-color: black;
+  /* Fondo negro para el reproductor */
+  color: white;
+  /* Texto blanco para el reproductor */
+
+}
+
+
+
+/* Para los botones, si deseas que también tengan fondo negro y texto blanco */
+#controles-adicionales button {
+  background-color: black;
+  /* Fondo negro para los botones */
+  color: white;
+  /* Texto blanco para los botones */
+}
+
+audio {
+  width: 100%;
+}
+
+#nombre-cancion-actual {
+  animation: mover 15s linear infinite;
+  color: #ff0000;
+  overflow: scroll;
+  width: 50%;
+  /* Ancho deseado */
+  -webkit-text-stroke: 1.5px #ff0000;
+
+}
+
+@keyframes mover {
+  100% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+}
+#controles-adicionales {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* Espacio entre los botones */
+
+}
+
+#controles-adicionales button {
+  background: none;
+  border: none;
+  font-size: 15px;
+  /* Tamaño del ícono */
+  cursor: pointer;
+}
+
+#controles-adicionales button:hover {
+  color: #fa0808;
+  /* Cambia el color al pasar el mouse */
+
+}
+
+
+#contenedor-lista {
+  text-align: justify;
+  max-height: 300px;
+  /* Ajusta esto al tamaño que prefieras */
+  overflow-y: auto;
+  /* Esto permite el desplazamiento vertical si el contenido es más largo que el contenedor */
+}
+
+
+#lista-canciones {
+  /* Estilos para la lista de canciones */
+  display: block;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  /* Elimina las viñetas */
+  padding: 0;
+  /* Elimina el espaciado interno */
+  margin: 0;
+  /* Elimina los márgenes externos */
+}
+
+#lista-canciones ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+#lista-canciones li {
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+
+}
+
+/* Estilos al pasar el mouse */
+#lista-canciones li:hover {
+  background-color: #ff0000;
+}
+
+
+@media (max-width: 600px) {
+  /* Estilos para dispositivos móviles */
+
+  .menu-navegacion {
+    top: 10px; /* Ajusta la posición vertical según tus necesidades */
+    right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+    position: fixed;
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el menú */
+    background-color: #333;
+    padding: 1px;
+  }
+
+  /* Estilos para las líneas del menú */
+  .menu-navegacion::before,
+  .menu-navegacion::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 1px;
+    background-color: #ffffff; /* Color de las líneas */
+    margin: 1px 0;
+  }
+
+  .menu-icono {
+    display: block; /* Muestra el icono en pantallas pequeñas */
+  }
+
+  .menu-enlaces {
+    text-align: center;
+    display: none; /* Oculta los enlaces en pantallas pequeñas */
+    flex-direction: flex;
+    position: absolute;
+    top: 30px;
+    right: -20%;
+    background-color: #ff0000;
+    width: 350px;
+    font-size: 0.7em;
+    align-items: center; /* Centra verticalmente */
+    border-radius: 1%;
+
+  }
+
+  .menu-enlaces li {
+    padding: 7px 3px;
+  }
+  
+
+  .menu-enlaces.active {
+    display: flex; /* Muestra los enlaces cuando se hace clic en el icono */
+  }
+
+
+  body {
+    font-size: 16px;
+    /* Ajusta según tus preferencias */
+  }
+
+
+  #reproductor-musica {
+    margin: 0px auto;
+    /* Ajusta el margen según tus necesidades */
+
+  }
+
+  #nombre-cancion-actual {
+    width: 50%;
+    /* O ajusta según tus necesidades */
+  }
+
+  #controles-adicionales button {
+    font-size: 20px;
+    /* Ajusta según tus preferencias */
+  }
+
+  audio {
+    max-width: 100%;
+    /* Ajusta según tus necesidades */
+  }
+
+}
